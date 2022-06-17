@@ -41,7 +41,7 @@ class _ProfileState extends State<Profile> {
             children: <Widget>[
               SizedBox(
                 height: 150,
-                child: Image.asset("assets/logo2.png", fit: BoxFit.contain),
+                child: Image.asset("assets/images/logo2.png", fit: BoxFit.contain),
               ),
               Text(
                 "Welcome Back",

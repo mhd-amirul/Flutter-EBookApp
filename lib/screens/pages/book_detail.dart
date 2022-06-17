@@ -73,7 +73,7 @@ class BookDetail extends StatelessWidget {
                 ),
                 SizedBox(height: 2),
                 Text(
-                  '4.8',
+                  data['rating'],
                   style: semiBoldText12.copyWith(color: blackColor2),
                 ),
               ],
@@ -87,7 +87,7 @@ class BookDetail extends StatelessWidget {
                 ),
                 SizedBox(height: 2),
                 Text(
-                  '180 Page',
+                  data['pages'],
                   style: semiBoldText12.copyWith(color: blackColor2),
                 ),
               ],
@@ -96,12 +96,12 @@ class BookDetail extends StatelessWidget {
             Column(
               children: [
                 Text(
-                  'Language',
+                  'language',
                   style: mediumText10.copyWith(color: dividerColor),
                 ),
                 SizedBox(height: 2),
                 Text(
-                  'ENG',
+                  data['language'],
                   style: semiBoldText12.copyWith(color: blackColor2),
                 ),
               ],
@@ -128,7 +128,7 @@ class BookDetail extends StatelessWidget {
     final pdfPinchController = PdfControllerPinch(
       document: PdfDocument.openAsset(data['fileRead']),
     );
-    Widget ReadFile() {
+    Widget readFile() {
       return Scaffold(
       appBar: AppBar(
         title: Text(data['title']),
@@ -144,7 +144,7 @@ class BookDetail extends StatelessWidget {
         margin: EdgeInsets.only(top: 30),
         child: TextButton(
           onPressed: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context) => ReadFile()));
+            Navigator.push(context, MaterialPageRoute(builder: (context) => readFile()));
           },
           style: TextButton.styleFrom(
             backgroundColor: greenColor,
@@ -206,7 +206,7 @@ class BookDetail extends StatelessWidget {
             ),
             SizedBox(height: 6),
             Text(
-              'Enchantment, as defined by bestselling business guru Guy Kawasaki, is not about manipulating people. It transforms situations and relationships. ',
+              data['description'],
               style: regularText12.copyWith(color: greyColor),
             ),
             infoDescription(),

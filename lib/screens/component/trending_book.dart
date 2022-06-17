@@ -18,7 +18,11 @@ class BookTemplate extends StatelessWidget {
               'imageUrl': info.imageUrl,
               'writers': info.writers,
               'title': info.title,
-              'fileRead': info.fileRead}
+              'fileRead': info.fileRead,
+              'language': info.language,
+              'pages': info.pages,
+              'rating': info.rating,
+              'description': info.description}
             );
           },
           child: Container(
